@@ -1,24 +1,51 @@
-# Structurizr Studio
-
 <p align="center">
-  <img src="images/icon.png" width="128" alt="Structurizr Studio icon">
+  <img src="https://raw.githubusercontent.com/Zerep0/structurizr-visualizer/main/packages/extension/images/icon.png" width="152" alt="Structurizr Studio icon">
 </p>
 
-Language support for the [Structurizr DSL](https://docs.structurizr.com/dsl) in Visual Studio Code. Build C4 architecture workspaces with syntax highlighting, context-aware completion, validation, navigation, multi-file includes, and full style editing support.
+<h1 align="center">Structurizr Studio</h1>
 
-## Features
+<p align="center">
+  <strong>Architecture as code, with the editing experience of a real language.</strong>
+</p>
 
-- Syntax highlighting for `.dsl` files, including line and block comments.
-- IntelliSense for workspace, model, views, configuration, and style declarations.
-- Completion for style properties and their supported values, including shapes, routing, borders, fonts, opacity, colors, icons, themes, and relationship styles.
-- Local file and directory completion for `!include`, `workspace extends`, `!docs`, `!adrs`, `!decisions`, `icon`, and `theme` paths.
-- Multi-file workspaces with file, directory, and nested includes. Included fragments do not need their own `workspace` block.
-- Cross-file completion and Go to Definition for flat and hierarchical identifiers such as `shop.api`.
-- Diagnostics for unresolved references, duplicate identifiers, invalid fragment placement, missing includes, and include cycles.
+<p align="center">
+  Write, split, navigate, and validate Structurizr DSL workspaces without leaving Visual Studio Code.
+</p>
 
-## Quick start
+<p align="center">
+  <a href="https://github.com/Zerep0/structurizr-visualizer/actions/workflows/ci.yml"><img src="https://github.com/Zerep0/structurizr-visualizer/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status"></a>
+  <a href="https://github.com/Zerep0/structurizr-visualizer/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Zerep0/structurizr-visualizer?color=2563eb" alt="Apache 2.0 license"></a>
+  <img src="https://img.shields.io/badge/VS%20Code-1.140%2B-007ACC?logo=visualstudiocode&logoColor=white" alt="VS Code 1.140 or newer">
+  <img src="https://img.shields.io/badge/Structurizr%20DSL-6.2.3-14b8a6" alt="Structurizr DSL 6.2.3 baseline">
+</p>
 
-Create a file named `workspace.dsl`:
+<p align="center">
+  <a href="#-quick-start">Quick start</a> ·
+  <a href="#-multi-file-workspaces">Multi-file</a> ·
+  <a href="#-style-with-confidence">Styles</a> ·
+  <a href="#-installation">Installation</a> ·
+  <a href="https://github.com/Zerep0/structurizr-visualizer/issues">Issues</a>
+</p>
+
+---
+
+Structurizr Studio adds IDE-grade language tooling to every `.dsl` file. It understands complete workspaces and standalone fragments, follows local includes, resolves identifiers across files, and recommends valid DSL and style values exactly where you need them.
+
+> Structurizr Studio is a language extension. It does not render diagrams or replace the official Structurizr parser and exporters.
+
+## ✨ Everything you need to write Structurizr DSL
+
+| | |
+| --- | --- |
+| 🧠 **Context-aware IntelliSense**<br>Complete workspace, model, relationship, view, configuration, and style declarations. | 🧩 **Real multi-file projects**<br>Use file, directory, and nested `!include` directives without adding `workspace` blocks to fragments. |
+| 🎨 **Complete style editing**<br>Discover style properties and valid values for shapes, colors, borders, routing, fonts, icons, themes, and relationships. | 🔗 **Cross-file navigation**<br>Complete flat and hierarchical identifiers such as `shop.api`, then jump to their definition with `F12`. |
+| 📁 **Filesystem suggestions**<br>Complete paths for includes, workspace extension, docs, ADRs, icons, and themes relative to the current file. | 🛡️ **Useful diagnostics**<br>Catch missing files, include cycles, duplicate identifiers, invalid fragment placement, and unresolved references early. |
+
+Syntax highlighting, line comments, block comments, bracket matching, and automatic quote/bracket closing are included out of the box.
+
+## 🚀 Quick start
+
+Create `workspace.dsl` and start typing:
 
 ```dsl
 workspace "Getting Started" {
@@ -46,11 +73,11 @@ workspace "Getting Started" {
 }
 ```
 
-Open the file in VS Code and use `Ctrl+Space` to request suggestions at any point.
+Use `Ctrl+Space` to request suggestions and `F12` to open the definition of a referenced element.
 
-## Multi-file workspaces
+## 🧩 Multi-file workspaces
 
-Structurizr Studio understands fragments in the context where they are included:
+Keep large architecture models focused and maintainable:
 
 ```text
 architecture/
@@ -59,6 +86,8 @@ architecture/
 │  ├─ people.dsl
 │  ├─ systems.dsl
 │  └─ relationships.dsl
+├─ views/
+│  └─ system-context.dsl
 └─ styles/
    └─ style.dsl
 ```
@@ -70,6 +99,8 @@ workspace {
     }
 
     views {
+        !include views/system-context.dsl
+
         styles {
             !include styles/style.dsl
         }
@@ -77,37 +108,73 @@ workspace {
 }
 ```
 
-Start typing a relative path after `!include` and the extension will suggest matching files and directories. `/` and `\` retrigger suggestions while traversing folders.
+Included files are parsed as contextual fragments, so `people.dsl`, `relationships.dsl`, and `style.dsl` can contain their declarations directly. Start typing a relative path after `!include`; `/` and `\` continue suggestions as you move through folders.
 
-## Installation
+## 🎨 Style with confidence
+
+Style fragments can be reused across workspaces and include element and relationship definitions:
+
+```dsl
+element "Critical" {
+    shape Hexagon
+    background #b91c1c
+    color #ffffff
+    stroke #7f1d1d
+    strokeWidth 5
+}
+
+relationship "Relationship" {
+    thickness 2
+    style dashed
+    opacity 90
+}
+```
+
+Completion covers the Structurizr DSL 6.2.3 style inventory, including the supported shapes and constrained values for routing, border styles, text alignment, metadata, descriptions, and more.
+
+## 📦 Installation
 
 ### Install from a VSIX
 
 1. Download `structurizr-studio.vsix`.
-2. In VS Code, open the Extensions view.
+2. Open the Extensions view in VS Code.
 3. Select the `...` menu and choose **Install from VSIX...**.
-4. Reload VS Code if requested.
+4. Select the downloaded file and reload VS Code if requested.
 
-You can also install it from a terminal:
+Or install it from a terminal:
 
 ```shell
 code --install-extension structurizr-studio.vsix
 ```
 
-The extension requires Visual Studio Code 1.140.0 or newer.
+## ✅ Compatibility at a glance
 
-## Current scope
+| Capability | Status |
+| --- | :---: |
+| Complete workspaces and standalone DSL fragments | ✅ |
+| Local file, directory, and nested includes | ✅ |
+| Relationships and styles inside included fragments | ✅ |
+| Cross-file identifiers, completion, and Go to Definition | ✅ |
+| Relative filesystem path completion | ✅ |
+| Structurizr DSL 6.2.3 style syntax and values | ✅ |
+| URL include downloading | ⚠️ Recognized, not fetched |
+| Diagram rendering and exporting | ➖ Use official Structurizr tools |
 
-The language baseline is Structurizr DSL 6.2.3. Local files, local directories, and nested includes are supported. URL includes are recognized but are not downloaded. The extension provides language tooling; it does not render diagrams or replace the official Structurizr parser/exporters.
+Requires Visual Studio Code 1.140.0 or newer.
 
-## Privacy
+## 🔒 Local and private by default
 
-The extension does not include telemetry and does not send workspace contents over the network. Local include resolution is read-only.
+The extension contains no telemetry and does not send workspace contents over the network. Static parsing, validation, navigation, and local include resolution run on your machine. Include resolution is read-only.
 
-## Feedback and issues
+## 💬 Feedback and support
 
-Report bugs and feature requests in the [GitHub issue tracker](https://github.com/Zerep0/structurizr-visualizer/issues).
+Found a parsing edge case or missing completion? Open a [GitHub issue](https://github.com/Zerep0/structurizr-visualizer/issues) with a minimal DSL example, your VS Code version, and the extension version.
 
-## Release notes
+- [Source code](https://github.com/Zerep0/structurizr-visualizer)
+- [Compatibility documentation](https://github.com/Zerep0/structurizr-visualizer/blob/main/docs/COMPATIBILITY.md)
+- [Changelog](https://github.com/Zerep0/structurizr-visualizer/blob/main/packages/extension/CHANGELOG.md)
+- [Roadmap](https://github.com/Zerep0/structurizr-visualizer/blob/main/docs/ROADMAP.md)
 
-Version 0.0.1 introduces the language server, multi-file includes, cross-file navigation, path completion, and Structurizr DSL 6.2.3 style support. The packaged extension also contains the complete changelog.
+## License
+
+Released under the [Apache License 2.0](https://github.com/Zerep0/structurizr-visualizer/blob/main/LICENSE).
