@@ -1,4 +1,4 @@
-workspace "Hello World" "A minimal Structurizr Studio example" {
+workspace "Hello World" "A minimal Structurizr Visualizer example" {
     model {
         user = person "User" "Uses the software system"
         system = softwareSystem "Software System" "Provides value to the user" {

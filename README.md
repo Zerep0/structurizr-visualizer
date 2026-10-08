@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="packages/extension/images/icon.png" width="152" alt="Structurizr Studio icon">
+  <img src="packages/extension/images/icon.png" width="152" alt="Structurizr Visualizer icon">
 </p>
 
-<h1 align="center">Structurizr Studio</h1>
+<h1 align="center">Structurizr Visualizer</h1>
 
 <p align="center">
   <strong>Architecture as code, with the editing experience of a real language.</strong>
@@ -29,9 +29,9 @@
 
 ---
 
-Structurizr Studio understands complete workspaces and standalone fragments, follows local includes, resolves identifiers across files, and recommends valid DSL and style values exactly where you need them.
+Structurizr Visualizer understands complete workspaces and standalone fragments, follows local includes, resolves identifiers across files, and recommends valid DSL and style values exactly where you need them.
 
-> Structurizr Studio is a language extension. It does not render diagrams or replace the official Structurizr parser and exporters.
+> Structurizr Visualizer is a language extension. It does not render diagrams or replace the official Structurizr parser and exporters.
 
 ## ✨ Highlights
 
@@ -113,10 +113,10 @@ pnpm install
 pnpm package:extension
 ```
 
-The package is written to `dist/structurizr-studio.vsix`. Install it from **Extensions → ... → Install from VSIX...**, or run:
+The package is written to `dist/structurizr-visualizer.vsix`. Install it from **Extensions → ... → Install from VSIX...**, or run:
 
 ```shell
-code --install-extension dist/structurizr-studio.vsix
+code --install-extension dist/structurizr-visualizer.vsix
 ```
 
 The complete downloader-facing documentation is in the [Marketplace README](packages/extension/README.md).
@@ -166,4 +166,4 @@ pnpm build
 
 ## 💬 Feedback and license
 
-Bug reports and feature requests are welcome in [GitHub Issues](https://github.com/Zerep0/structurizr-visualizer/issues). Structurizr Studio is released under the [Apache License 2.0](LICENSE).
+Bug reports and feature requests are welcome in [GitHub Issues](https://github.com/Zerep0/structurizr-visualizer/issues). Structurizr Visualizer is released under the [Apache License 2.0](LICENSE).

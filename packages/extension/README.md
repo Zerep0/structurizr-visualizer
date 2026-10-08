@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Zerep0/structurizr-visualizer/main/packages/extension/images/icon.png" width="152" alt="Structurizr Studio icon">
+  <img src="https://raw.githubusercontent.com/Zerep0/structurizr-visualizer/main/packages/extension/images/icon.png" width="152" alt="Structurizr Visualizer icon">
 </p>
 
-<h1 align="center">Structurizr Studio</h1>
+<h1 align="center">Structurizr Visualizer</h1>
 
 <p align="center">
   <strong>Architecture as code, with the editing experience of a real language.</strong>
@@ -29,9 +29,9 @@
 
 ---
 
-Structurizr Studio adds IDE-grade language tooling to every `.dsl` file. It understands complete workspaces and standalone fragments, follows local includes, resolves identifiers across files, and recommends valid DSL and style values exactly where you need them.
+Structurizr Visualizer adds IDE-grade language tooling to every `.dsl` file. It understands complete workspaces and standalone fragments, follows local includes, resolves identifiers across files, and recommends valid DSL and style values exactly where you need them.
 
-> Structurizr Studio is a language extension. It does not render diagrams or replace the official Structurizr parser and exporters.
+> Structurizr Visualizer is a language extension. It does not render diagrams or replace the official Structurizr parser and exporters.
 
 ## ✨ Everything you need to write Structurizr DSL
 
@@ -136,7 +136,7 @@ Completion covers the Structurizr DSL 6.2.3 style inventory, including the suppo
 
 ### Install from a VSIX
 
-1. Download `structurizr-studio.vsix`.
+1. Download `structurizr-visualizer.vsix`.
 2. Open the Extensions view in VS Code.
 3. Select the `...` menu and choose **Install from VSIX...**.
 4. Select the downloaded file and reload VS Code if requested.
@@ -144,7 +144,7 @@ Completion covers the Structurizr DSL 6.2.3 style inventory, including the suppo
 Or install it from a terminal:
 
 ```shell
-code --install-extension structurizr-studio.vsix
+code --install-extension structurizr-visualizer.vsix
 ```
 
 ## ✅ Compatibility at a glance

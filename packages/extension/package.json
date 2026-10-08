@@ -1,9 +1,13 @@
 {
     "name": "vscode-structurizr-visualizer",
-    "description": "Structurizr DSL support with IntelliSense, validation, navigation, multi-file includes, and complete style syntax.",
-    "version": "0.0.1",
+    "description": "IDE-grade Structurizr DSL support with IntelliSense, validation, cross-file navigation, multi-file includes, and complete styling.",
+    "version": "0.0.2",
     "publisher": "zerep",
-    "displayName": "Structurizr Studio",
+    "displayName": "Structurizr Visualizer",
+    "author": {
+        "name": "Zerep0",
+        "url": "https://github.com/Zerep0"
+    },
     "type": "module",
     "license": "Apache-2.0",
     "icon": "images/icon.png",
@@ -20,9 +24,11 @@
         "structurizr",
         "c4",
         "architecture",
+        "architecture as code",
         "dsl",
         "diagram as code",
-        "language server"
+        "language server",
+        "intellisense"
     ],
     "galleryBanner": {
         "color": "#111827",
@@ -68,7 +74,7 @@
         "build": "npm run build:prepare && tsc -b tsconfig.json && node esbuild.mjs",
         "build:package": "npm run build:prepare && tsc -b tsconfig.json && node esbuild.mjs --minify",
         "build:clean": "npm run clean && npm run build",
-        "package": "shx mkdir -p ../../dist && vsce package --no-dependencies --out ../../dist/structurizr-studio.vsix",
+        "package": "shx mkdir -p ../../dist && vsce package --no-dependencies --out ../../dist/structurizr-visualizer.vsix",
         "watch": "npm run build:prepare && concurrently -n tsc,esbuild -c blue,yellow \"tsc -b tsconfig.json --watch\" \"node esbuild.mjs --watch\""
     },
     "dependencies": {

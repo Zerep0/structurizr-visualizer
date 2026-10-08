@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://structurizr.studio/schemas/compatibility.schema.json",
-  "title": "Structurizr Studio compatibility manifest",
+  "$id": "https://raw.githubusercontent.com/Zerep0/structurizr-visualizer/main/docs/compatibility.schema.json",
+  "title": "Structurizr Visualizer compatibility manifest",
   "type": "object",
   "additionalProperties": false,
   "required": ["schemaVersion", "baseline", "statusModel", "features"],

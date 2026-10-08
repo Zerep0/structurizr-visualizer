@@ -1,5 +1,6 @@
 {
-    "recommendations": [
-        "langium.langium-vscode"
-    ]
+  "recommendations": [
+    "langium.langium-vscode",
+    "zerep.vscode-structurizr-visualizer"
+  ]
 }

@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to Structurizr Studio are documented in this file.
+All notable changes to Structurizr Visualizer are documented in this file.
+
+## 0.0.2
+
+- Renamed the extension from Structurizr Studio to Structurizr Visualizer.
+- Redesigned the Marketplace presentation with a clearer product description, visual feature overview, badges, examples, support information, and an explicit compatibility table.
+- Improved extension discovery metadata and added the project author.
+- Rebuilt the installable VSIX with the bundled icon, license, README, and changelog.
 
 ## 0.0.1
 

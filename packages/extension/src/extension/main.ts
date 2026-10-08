@@ -40,7 +40,7 @@ async function startLanguageClient(context: vscode.ExtensionContext): Promise<La
     // Create the language client and start the client.
     const client = new LanguageClient(
         'structurizr',
-        'Structurizr',
+        'Structurizr Visualizer',
         serverOptions,
         clientOptions
     );

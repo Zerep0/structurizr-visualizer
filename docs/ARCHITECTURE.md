@@ -2,7 +2,7 @@
 
 ## Current system
 
-Structurizr Studio is a TypeScript monorepo with two executable boundaries:
+Structurizr Visualizer is a TypeScript monorepo with two executable boundaries:
 
 - `packages/language` owns the Langium grammar, generated AST, semantic naming, scope resolution, and validation. It has no VS Code dependency.
 - `packages/extension` owns the VS Code language client and the Node language-server process. The server composes the reusable language package and communicates over LSP.
