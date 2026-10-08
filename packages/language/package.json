@@ -1,0 +1,43 @@
+{
+    "name": "structurizr-language",
+    "description": "The language specific package",
+    "version": "0.0.1",
+    "type": "module",
+    "engines": {
+        "node": ">=22.12.0 <27",
+        "pnpm": ">=12.10.1 <13"
+    },
+    "files": [
+        "out",
+        "src"
+    ],
+    "main": "./out/index.js",
+    "module": "./out/index.js",
+    "exports": {
+        ".": {
+            "types": "./out/index.d.ts",
+            "default": "./out/index.js"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            ".": [
+                "out/index"
+            ]
+        }
+    },
+    "scripts": {
+        "clean": "shx rm -fr *.tsbuildinfo out",
+        "build": "echo 'No build step'",
+        "build:clean": "npm run clean && npm run build",
+        "test": "vitest run",
+        "langium:generate": "langium generate",
+        "langium:watch": "langium generate --watch"
+    },
+    "dependencies": {
+        "langium": "~4.4.0"
+    },
+    "devDependencies": {
+        "langium-cli": "~4.4.0"
+    }
+}

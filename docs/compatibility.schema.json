@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurizr.studio/schemas/compatibility.schema.json",
+  "title": "Structurizr Studio compatibility manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "baseline", "statusModel", "features"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verifiedOn",
+        "structurizrVersion",
+        "structurizrCommit",
+        "dslArtifact",
+        "langiumVersion",
+        "nodeVersion",
+        "vscodeApi",
+        "lspProtocol"
+      ],
+      "properties": {
+        "verifiedOn": { "type": "string", "format": "date" },
+        "structurizrVersion": { "type": "string" },
+        "structurizrCommit": { "type": "string" },
+        "dslArtifact": { "type": "string" },
+        "langiumVersion": { "type": "string" },
+        "nodeVersion": { "type": "string" },
+        "vscodeApi": { "type": "string" },
+        "lspProtocol": { "type": "string" }
+      }
+    },
+    "statusModel": {
+      "type": "array",
+      "prefixItems": [
+        { "const": "not-applicable" },
+        { "const": "not-started" },
+        { "const": "recognized" },
+        { "const": "partial" },
+        { "const": "tested" },
+        { "const": "verified" }
+      ],
+      "items": false
+    },
+    "features": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/feature" }
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "not-applicable",
+        "not-started",
+        "recognized",
+        "partial",
+        "tested",
+        "verified"
+      ]
+    },
+    "feature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "documentation",
+        "syntax",
+        "semanticAnalysis",
+        "multiFile",
+        "officialParity",
+        "rendering",
+        "tests"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "documentation": { "type": "string", "format": "uri-reference" },
+        "syntax": { "$ref": "#/$defs/status" },
+        "semanticAnalysis": { "$ref": "#/$defs/status" },
+        "multiFile": { "$ref": "#/$defs/status" },
+        "officialParity": { "$ref": "#/$defs/status" },
+        "rendering": { "$ref": "#/$defs/status" },
+        "tests": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

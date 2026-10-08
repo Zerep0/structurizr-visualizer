@@ -1,0 +1,89 @@
+{
+    "name": "vscode-structurizr-visualizer",
+    "description": "Structurizr DSL support with IntelliSense, validation, navigation, multi-file includes, and complete style syntax.",
+    "version": "0.0.1",
+    "publisher": "zerep",
+    "displayName": "Structurizr Studio",
+    "type": "module",
+    "license": "Apache-2.0",
+    "icon": "images/icon.png",
+    "pricing": "Free",
+    "homepage": "https://github.com/Zerep0/structurizr-visualizer#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Zerep0/structurizr-visualizer.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Zerep0/structurizr-visualizer/issues"
+    },
+    "keywords": [
+        "structurizr",
+        "c4",
+        "architecture",
+        "dsl",
+        "diagram as code",
+        "language server"
+    ],
+    "galleryBanner": {
+        "color": "#111827",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.140.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Visualization"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "structurizr",
+                "aliases": [
+                    "Structurizr",
+                    "structurizr"
+                ],
+                "extensions": [
+                    ".dsl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "structurizr",
+                "scopeName": "source.structurizr",
+                "path": "syntaxes/structurizr.tmLanguage.json"
+            }
+        ]
+    },
+    "activationEvents": [
+        "onLanguage:structurizr"
+    ],
+    "main": "./out/extension/main.cjs",
+    "scripts": {
+        "clean": "shx rm -fr *.tsbuildinfo out syntaxes",
+        "vscode:prepublish": "npm run build:package",
+        "build:prepare": "shx mkdir -p ./syntaxes/ && shx cp -f ../language/syntaxes/structurizr.tmLanguage.json ./syntaxes/structurizr.tmLanguage.json",
+        "build": "npm run build:prepare && tsc -b tsconfig.json && node esbuild.mjs",
+        "build:package": "npm run build:prepare && tsc -b tsconfig.json && node esbuild.mjs --minify",
+        "build:clean": "npm run clean && npm run build",
+        "package": "shx mkdir -p ../../dist && vsce package --no-dependencies --out ../../dist/structurizr-studio.vsix",
+        "watch": "npm run build:prepare && concurrently -n tsc,esbuild -c blue,yellow \"tsc -b tsconfig.json --watch\" \"node esbuild.mjs --watch\""
+    },
+    "dependencies": {
+        "langium": "~4.4.0",
+        "structurizr-language": "workspace:*",
+        "vscode-languageclient": "~10.1.2",
+        "vscode-languageserver": "~10.1.2"
+    },
+    "devDependencies": {
+        "@types/vscode": "~1.140.0",
+        "@vscode/vsce": "~4.0.0",
+        "concurrently": "~8.2.1",
+        "esbuild": "~0.25.5"
+    },
+    "vsce": {
+        "dependencies": false
+    }
+}

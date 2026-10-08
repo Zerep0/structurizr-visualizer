@@ -1,0 +1,17 @@
+{
+    "projectName": "Structurizr",
+    "languages": [
+        {
+            "id": "structurizr",
+            "grammar": "src/structurizr.langium",
+            "fileExtensions": [
+                "dsl"
+            ],
+            "caseInsensitive": true,
+            "textMate": {
+                "out": "syntaxes/structurizr.tmLanguage.json"
+            }
+        }
+    ],
+    "out": "src/generated"
+}

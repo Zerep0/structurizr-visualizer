@@ -1,0 +1,712 @@
+{
+  "$schema": "./compatibility.schema.json",
+  "schemaVersion": 1,
+  "baseline": {
+    "verifiedOn": "2026-10-08",
+    "structurizrVersion": "6.2.3",
+    "structurizrCommit": "529efa8",
+    "dslArtifact": "com.structurizr:structurizr-dsl:6.2.3",
+    "langiumVersion": "4.4.0",
+    "nodeVersion": "22 LTS (tested with 22.14.0)",
+    "vscodeApi": "1.140",
+    "lspProtocol": "3.18"
+  },
+  "statusModel": [
+    "not-applicable",
+    "not-started",
+    "recognized",
+    "partial",
+    "tested",
+    "verified"
+  ],
+  "features": [
+    {
+      "id": "workspace",
+      "documentation": "https://docs.structurizr.com/dsl/language#workspace",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "workspace-extends",
+      "documentation": "https://docs.structurizr.com/dsl/language#workspace",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "model",
+      "documentation": "https://docs.structurizr.com/dsl/language#model",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "archetypes",
+      "documentation": "https://docs.structurizr.com/dsl/language#archetypes",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "group",
+      "documentation": "https://docs.structurizr.com/dsl/language#group",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "person",
+      "documentation": "https://docs.structurizr.com/dsl/language#person",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "software-system",
+      "documentation": "https://docs.structurizr.com/dsl/language#softwareSystem",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "container",
+      "documentation": "https://docs.structurizr.com/dsl/language#container",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "component",
+      "documentation": "https://docs.structurizr.com/dsl/language#component",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "deployment-environment",
+      "documentation": "https://docs.structurizr.com/dsl/language#deploymentEnvironment",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "deployment-group",
+      "documentation": "https://docs.structurizr.com/dsl/language#deploymentGroup",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "deployment-node",
+      "documentation": "https://docs.structurizr.com/dsl/language#deploymentNode",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "infrastructure-node",
+      "documentation": "https://docs.structurizr.com/dsl/language#infrastructureNode",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "software-system-instance",
+      "documentation": "https://docs.structurizr.com/dsl/language#softwareSystemInstance",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "container-instance",
+      "documentation": "https://docs.structurizr.com/dsl/language#containerInstance",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "instance-of",
+      "documentation": "https://docs.structurizr.com/dsl/language#instanceOf",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "health-check",
+      "documentation": "https://docs.structurizr.com/dsl/language#healthCheck",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "custom-element",
+      "documentation": "https://docs.structurizr.com/dsl/language#element",
+      "syntax": "recognized",
+      "semanticAnalysis": "partial",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "relationship",
+      "documentation": "https://docs.structurizr.com/dsl/language#relationship",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "remove-relationship",
+      "documentation": "https://docs.structurizr.com/dsl/language#remove-relationship",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "relationship-archetype-operator",
+      "documentation": "https://docs.structurizr.com/dsl/archetypes",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "tag-and-tags",
+      "documentation": "https://docs.structurizr.com/dsl/language#tags",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "element-description",
+      "documentation": "https://docs.structurizr.com/dsl/language#description",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "technology",
+      "documentation": "https://docs.structurizr.com/dsl/language#technology",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "instances",
+      "documentation": "https://docs.structurizr.com/dsl/language#instances",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "url",
+      "documentation": "https://docs.structurizr.com/dsl/language#url",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "properties",
+      "documentation": "https://docs.structurizr.com/dsl/language#properties",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "perspectives",
+      "documentation": "https://docs.structurizr.com/dsl/language#perspectives",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "element-modification",
+      "documentation": "https://docs.structurizr.com/dsl/language#element",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": [],
+      "notes": "Covers !element."
+    },
+    {
+      "id": "elements-bulk-modification",
+      "documentation": "https://docs.structurizr.com/dsl/language#elements",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "relationship-modification",
+      "documentation": "https://docs.structurizr.com/dsl/language#relationship",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": [],
+      "notes": "Covers !relationship."
+    },
+    {
+      "id": "relationships-bulk-modification",
+      "documentation": "https://docs.structurizr.com/dsl/language#relationships",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "deprecated-ref-and-extend",
+      "documentation": "https://docs.structurizr.com/dsl/language#ref",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "views",
+      "documentation": "https://docs.structurizr.com/dsl/language#views",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "system-landscape-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#system-landscape-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "system-context-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#system-context-view",
+      "syntax": "tested",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "container-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#container-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "component-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#component-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "filtered-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#filtered-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "dynamic-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#dynamic-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "deployment-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#deployment-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "custom-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#custom-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "image-view",
+      "documentation": "https://docs.structurizr.com/dsl/language#image-view",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "view-include-exclude",
+      "documentation": "https://docs.structurizr.com/dsl/language#include",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "view-auto-layout",
+      "documentation": "https://docs.structurizr.com/dsl/language#autoLayout",
+      "syntax": "tested",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "view-default-title-description",
+      "documentation": "https://docs.structurizr.com/dsl/language#default",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "view-animation",
+      "documentation": "https://docs.structurizr.com/dsl/language#animation",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "styles",
+      "documentation": "https://docs.structurizr.com/dsl/language#styles",
+      "syntax": "tested",
+      "semanticAnalysis": "not-started",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"],
+      "notes": "The complete Structurizr DSL 6.2.3 style token inventory, light/dark wrappers, custom properties, inline themes, fragments, and enumerated-value completion are tested. Runtime theme/icon loading and rendering are not implemented."
+    },
+    {
+      "id": "light-and-dark-styles",
+      "documentation": "https://docs.structurizr.com/dsl/language#light",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "element-style",
+      "documentation": "https://docs.structurizr.com/dsl/language#element-style",
+      "syntax": "tested",
+      "semanticAnalysis": "not-started",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"],
+      "notes": "All 19 official shapes and every 6.2.3 element-style property, including iconPosition and custom properties, are parsed in tests."
+    },
+    {
+      "id": "relationship-style",
+      "documentation": "https://docs.structurizr.com/dsl/language#relationship-style",
+      "syntax": "tested",
+      "semanticAnalysis": "not-started",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": ["packages/language/test/grammar.test.ts"],
+      "notes": "All documented and parser-supported 6.2.3 relationship-style properties, including jump and legacy dashed/metadata/description tokens, are parsed in tests."
+    },
+    {
+      "id": "theme",
+      "documentation": "https://docs.structurizr.com/dsl/language#theme",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "themes",
+      "documentation": "https://docs.structurizr.com/dsl/language#themes",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "terminology",
+      "documentation": "https://docs.structurizr.com/dsl/language#terminology",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "configuration",
+      "documentation": "https://docs.structurizr.com/dsl/language#configuration",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "workspace-scope",
+      "documentation": "https://docs.structurizr.com/dsl/language#scope",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "workspace-visibility",
+      "documentation": "https://docs.structurizr.com/dsl/language#visibility",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "workspace-users",
+      "documentation": "https://docs.structurizr.com/dsl/language#users",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "include-directive",
+      "documentation": "https://docs.structurizr.com/dsl/includes",
+      "syntax": "tested",
+      "semanticAnalysis": "partial",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": ["packages/language/test/grammar.test.ts"],
+      "notes": "Local files, directories, nested includes, missing targets, cycles, automatic fragment loading, and relative filesystem completion are tested. URL fetching and exact textual-inlining parity are not implemented."
+    },
+    {
+      "id": "identifier-modes",
+      "documentation": "https://docs.structurizr.com/dsl/identifiers",
+      "syntax": "tested",
+      "semanticAnalysis": "tested",
+      "multiFile": "tested",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": ["packages/language/test/grammar.test.ts"],
+      "notes": "Flat and hierarchical element linking, duplicate diagnostics, sibling-fragment completion, and segment completion after a dot are tested across include boundaries. Relationship identifiers need broader coverage."
+    },
+    {
+      "id": "implied-relationships-directive",
+      "documentation": "https://docs.structurizr.com/dsl/language#impliedRelationships",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "docs-directive",
+      "documentation": "https://docs.structurizr.com/dsl/language#docs",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "adrs-directive",
+      "documentation": "https://docs.structurizr.com/dsl/language#adrs",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-started",
+      "tests": []
+    },
+    {
+      "id": "components-directive",
+      "documentation": "https://docs.structurizr.com/dsl/language#components",
+      "syntax": "recognized",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "script-directive",
+      "documentation": "https://docs.structurizr.com/dsl/language#script",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "plugin-directive",
+      "documentation": "https://docs.structurizr.com/dsl/language#plugin",
+      "syntax": "not-started",
+      "semanticAnalysis": "not-started",
+      "multiFile": "not-started",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": []
+    },
+    {
+      "id": "case-insensitive-keywords",
+      "documentation": "https://docs.structurizr.com/dsl/language",
+      "syntax": "tested",
+      "semanticAnalysis": "not-applicable",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": ["packages/language/test/grammar.test.ts"]
+    },
+    {
+      "id": "significant-line-boundaries",
+      "documentation": "https://docs.structurizr.com/dsl/language",
+      "syntax": "tested",
+      "semanticAnalysis": "not-applicable",
+      "multiFile": "not-applicable",
+      "officialParity": "not-started",
+      "rendering": "not-applicable",
+      "tests": ["packages/language/test/grammar.test.ts"],
+      "notes": "Newlines prevent optional positional arguments from consuming the next statement. Inline-block coverage is incomplete."
+    }
+  ]
+}
